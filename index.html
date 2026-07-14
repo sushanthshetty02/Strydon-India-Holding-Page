@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strydon Systems</title>
+<meta name="description" content="Strydon Systems — Indigenous IC Engines for India's UAV Revolution">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #131829;
+    --accent: #4FC3F7;
+    --text: #EDF1F7;
+    --tagline: #C7CEDA;
+    --footer: #A9B2C3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: var(--bg);
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .page {
+    width: 100%;
+    padding: 6vh clamp(16px, 6vw, 100px);
+    --bracket-w: 10px;
+    --gap: clamp(16px, 3vw, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--gap);
+    width: 100%;
+  }
+
+  .bracket {
+    flex: 0 0 auto;
+    width: var(--bracket-w);
+    background: var(--accent);
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .bracket::before,
+  .bracket::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: clamp(28px, 3vw, 48px);
+    height: 10px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
+
+  .bracket::before { top: 0; }
+  .bracket::after { bottom: 0; }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(28px, 5vh, 56px) 0;
+  }
+
+  h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: min(4.2rem, 6vw);
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .rule {
+    border: none;
+    border-top: 2px solid var(--accent);
+    margin: clamp(20px, 3vw, 32px) 0;
+    width: 100%;
+  }
+
+  .tagline {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: min(1.6rem, 2.6vw);
+    color: var(--tagline);
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+    color: var(--footer);
+    margin: clamp(32px, 6vh, 72px) 0 0 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .footer a {
+    color: var(--footer);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: var(--accent);
+  }
+
+  @media (max-width: 480px) {
+    .page { padding: 8vh 20px; }
+    .bracket { width: 7px; }
+    .bracket::before, .bracket::after { width: 22px; height: 7px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="row">
+      <div class="bracket"></div>
+      <div class="content">
+        <h1>Strydon Systems ]</h1>
+        <hr class="rule">
+        <p class="tagline">Indigenous IC Engines for India&rsquo;s UAV Revolution</p>
+      </div>
+    </div>
+    <p class="footer"><a href="mailto:info@strydonsystems.com">info@strydonsystems.com</a></p>
+  </div>
+</body>
+</html>
